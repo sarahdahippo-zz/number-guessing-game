@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="../resources/css/style.css" type="text/css">
+</head>
+
+<body>
+<div>
+  <header>
+    <h1>NUMBER GUESSING GAME</h1>
+  </header>
+  <hr /><br />
+
+  <div class="instructions">
+  <div class="instruction">
+    <h3>Step 1</h3>
+    <p>Input your number guess from 0 to 10, inclusive.</p>
+  </div>
+  <div class="instruction">
+    <h3>Step 2</h3>
+    <p>Click "Guess a Number" to submit your guess and see who won the round.</p>
+  </div>
+  <div class="instruction">
+    <h3>Step 3</h3>
+    <p>Click "Next Round" to play again.</p>
+  </div>
+  </div>
+  
+  <div class="rounds">
+    <p class="round-label">ROUND <span id="round-number">1</span></p>
+    <h3 class="target-label">Target Number: <span id="target-number">?</span></h3>
+  </div>
+
+  <div class="guessing-area">
+    <div class="guess computer-guess">
+      <div>
+        <h3 class="guess-title">Computer</h3>
+        <p>Score: <span id="computer-score">0</span></p>
+      </div>
+      <p id="computer-guess">?</p>
+      <p class="winning-text" id="computer-wins"></p>
+    </div>
+    <div class="guess user-guess">
+      <div>
+        <h3 class="guess-title">You</h3>
+        <p>Score: <span id="user-score">0</span></p>
+      </div>
+      <input type="number" id="user-guess" min=0 max=9 value=0>
+      <div class="number-controls">
+        <button class="number-control left" id="subtract" disabled>-</button>
+        <button class="number-control right" id="add">+</button>
+      </div>
+      <button class="button" id="guess">Guess a Number</button>
+    </div>
+  </div>
+
+  <div class="next-round-container">
+    <button class="button" id="next-round" disabled>Next Round</button>
+  </div>
+</div>
+
+  <script src="./script.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>
